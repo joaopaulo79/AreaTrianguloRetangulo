@@ -6,25 +6,27 @@ namespace AreaTrianguloRetangulo
     {
         static void Main(string[] args)
         {
-            Console.WriteLine();
+            double b, h, a;
+
             Console.ForegroundColor = ConsoleColor.DarkYellow;
-            Console.Write("Digite a medida da altura do seu triângulo retângulo: ");
+            Console.WriteLine("\n=== Área do Triângulo Retângulo ===\n");
             Console.ResetColor();
-            string alturaDigitada = Console.ReadLine();
-            double altura = Convert.ToDouble(alturaDigitada);
-            Console.WriteLine();
+            
+            Console.WriteLine("Diite a medida da base e da altura\nde seu triângulo.\n");
+
+            Console.Write("Base....: ");
+            b = Convert.ToDouble(Console.ReadLine());
+
+            Console.Write("Altura..: ");
+            h = Convert.ToDouble(Console.ReadLine());
+
+            a = (b * h) / 2;
+
             Console.ForegroundColor = ConsoleColor.DarkYellow;
-            Console.Write("Digite a medida da base do seu triângulo retângulo: ");
+            Console.WriteLine("\n=== Resultado ===\n");
             Console.ResetColor();
-            string baseDigitada = Console.ReadLine();
-            double baseTotal = Convert.ToDouble(baseDigitada);
-            double area = baseTotal * altura / 2;
-            Console.WriteLine();
-            Console.WriteLine($"Base..: {baseTotal}");
-            Console.WriteLine($"Altura: {altura}");
-            Console.WriteLine();
-            Console.WriteLine($"Área..: {area}");
-            Console.WriteLine();
+
+            Console.WriteLine($"Base..: {b}\nAltura: {h}\n\nÁrea..: {a}\n");
         }
     }
 }
